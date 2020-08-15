@@ -27,4 +27,4 @@ I'm a cooperative and artivulate professional.
 **This is the site that I developed at Actindi, Inc. in Tokyo in 2019-2020**
 
 The site is a web media for parents whom want to find where to go to with their children.
-In 2020, I developed new EC site (subdomain of the media site)and we start to sale web tickets on the site. The users can get tickets online in advance at a bargain! Many users tell us the tickets help them to go out easy with their young children.
+In 2020, I developed new EC site (subdomain of the media site)and we start to sale web tickets on the site. The users can get tickets online in advance at a bargain! Many users tell us the tickets help them to go out easy with their young children. I'm so happy to hear these reviews and very proud to developing a wonderful product.
