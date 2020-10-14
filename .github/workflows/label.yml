@@ -32,8 +32,8 @@ jobs:
                 icon_emoji: ':octocat:',
                 attachments: [{
                   color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
-                  text 'テスト'
-                }]
+                  text: `aaa`,
+          }]
               }
 
             # fields: repo,message,author,workflow # selectable (default: repo,message)
