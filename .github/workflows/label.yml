@@ -34,7 +34,6 @@ jobs:
                 color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                 text: `${process.env.GITHUB_REPOSITORY} \n
                 :information_source:"共有したい" / "breaking"ラベルがついたPRです。
-                ${{ github.event.pull_request.labels.*.name }} \n 
                 ${{ github.event.pull_request.title }} \n
                 ${{ github.event.pull_request.url }}`
               }]
