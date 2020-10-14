@@ -22,6 +22,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: 8398a7/action-slack@v3
+          if: ${{ contains(github.event.pull_request.labels.*.name, 'project') }}
           with:
             status: ${{ job.status }}
             fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
