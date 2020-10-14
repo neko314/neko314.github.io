@@ -29,7 +29,7 @@ jobs:
           custom_payload: |
             {
               username: 'action-slack',
-              icon_emoji: ':octocat:',
+              icon_emoji: ':loudspeaker:',
               attachments: [{
                 color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                 text: `${process.env.GITHUB_REPOSITORY} \n
