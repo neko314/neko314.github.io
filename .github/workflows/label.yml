@@ -34,7 +34,7 @@ jobs:
                   color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                   text: `${process.env.GITHUB_REPOSITORY} \n
                   ${process.env.GITHUB_REF} \n
-                  ${{ githu.event.pull_request }}`
+                  ${{ contains(github.event.pull_request.labels.*.name, 'project') }}
                 }]
               }
 
