@@ -7,16 +7,16 @@ on:
     types: [opened, labeled]
 
 jobs:
-  # to_project:
-  #   name: move PR / issue with project label to project
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: alex-page/github-project-automation-plus@v0.3.0
-  #       if: ${{ contains(github.event.pull_request.labels.*.name, 'project') || contains(github.event.issue.labels.*.name, 'project') }}
-  #       with:
-  #         project: Project
-  #         column: To Do
-  #         repo-token: ${{ secrets.TEST_SECRET }}
+  to_project:
+    name: move PR / issue with project label to project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.3.0
+        if: ${{ contains(github.event.pull_request.labels.*.name, 'project') || contains(github.event.issue.labels.*.name, 'project') }}
+        with:
+          project: Project
+          column: To Do
+          repo-token: ${{ secrets.TEST_SECRET }}
   to_slack:
     name: Notificate via Slack when specific labels are attached
     runs-on: ubuntu-latest
