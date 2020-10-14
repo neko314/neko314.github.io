@@ -33,7 +33,7 @@ jobs:
                 attachments: [{
                   color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                   text: `${process.env.GITHUB_REPOSITORY} \n
-                  ${process.env.GITHUB_EVENT_NAME}`,
+                  ${process.env.GITHUB_REF}`,
                 }]
               }
 
