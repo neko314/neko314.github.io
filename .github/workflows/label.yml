@@ -2,7 +2,7 @@ name: Labels
 
 on:
   pull_request:
-    types: [created, labeled]
+    # types: [created, labeled]
   issues:
     types: [opened, labeled]
 
@@ -17,3 +17,14 @@ jobs:
           project: Project
           column: To Do
           repo-token: ${{ secrets.TEST_SECRET }}
+  to_slack:
+      name: Notificate via Slack when specific labels are attached
+      runs-on: ubuntu-latest
+      steps:
+        - uses: 8398a7/action-slack@v3
+          with:
+            status: ${{ job.status }}
+            fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
+          env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+          if: always() # Pick up events even if the job fails or is canceled.
