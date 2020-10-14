@@ -2,7 +2,7 @@ name: Labels
 
 on:
   pull_request:
-    # types: [created, labeled]
+    types: [created, labeled]
   issues:
     types: [opened, labeled]
 
