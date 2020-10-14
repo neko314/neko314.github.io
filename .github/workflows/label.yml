@@ -34,11 +34,10 @@ jobs:
                   color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                   text: `${process.env.GITHUB_REPOSITORY} \n
                   ${process.env.GITHUB_REF} \n
-                  ${process.env.PR}`
+                  ${{ githu.event.pull_request }}`
                 }]
               }
 
             # fields: repo,message,author,workflow # selectable (default: repo,message)
           env:
             SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
-            PR: ${{ github.event.pull_request }}
