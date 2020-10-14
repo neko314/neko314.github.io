@@ -33,7 +33,7 @@ jobs:
                 attachments: [{
                   color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
                   text: `aaa`,
-          }]
+                }]
               }
 
             # fields: repo,message,author,workflow # selectable (default: repo,message)
