@@ -34,7 +34,7 @@ jobs:
                 text: `${process.env.GITHUB_REPOSITORY} \n
                 "共有したい" / "breaking"ラベル
                 ${{ github.event.pull_request.title }} \n
-                ${{ github.event.pull_request.url }}`
+                ${{ github.event.pull_request.html_url }}`
               }]
             }
 
